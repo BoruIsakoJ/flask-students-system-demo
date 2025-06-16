@@ -6,9 +6,9 @@ with app.app_context():
     Student.query.delete()
     Course.query.delete()
     Enrollment.query.delete()
-    db.session.execute(sa_text('TRUNCATE TABLE enrollments RESTART IDENTITY CASCADE'))
-    db.session.execute(sa_text('TRUNCATE TABLE students RESTART IDENTITY CASCADE'))
-    db.session.execute(sa_text('TRUNCATE TABLE courses RESTART IDENTITY CASCADE'))
+    # db.session.execute(sa_text('TRUNCATE TABLE enrollments RESTART IDENTITY CASCADE'))
+    # db.session.execute(sa_text('TRUNCATE TABLE students RESTART IDENTITY CASCADE'))
+    # db.session.execute(sa_text('TRUNCATE TABLE courses RESTART IDENTITY CASCADE'))
 
     db.session.add_all([
         Student(name="Frank"),
